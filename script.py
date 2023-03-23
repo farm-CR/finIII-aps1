@@ -108,6 +108,8 @@ class Strategy:
 
 estrategias = [Strategy(file) for file in os.listdir("input")]
 
+if not os.path.exists("output"): os.makedirs("output")
+
 for estrategia in estrategias:
     estrategia.plot()
     estrategia.report()
